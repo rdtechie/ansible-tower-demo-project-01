@@ -1,0 +1,4 @@
+# from galaxy
+- src: Azure.azure_preview_modules
+- src: rdtechie.az_create_resource_group
+- src: rdtechie.az_delete_resource_group
