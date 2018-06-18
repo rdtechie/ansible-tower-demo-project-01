@@ -8,6 +8,6 @@
     - ./vars/vars.yml
   roles:
     - { role: Azure.azure_preview_modules }
-    - { role: rdtechie.az_naming_convention }
-    - { role: rdtechie.az_create_resource_group  }
+    - { role: az_naming_convention }
+    - { role: az_create_resource_group  }
 ...
