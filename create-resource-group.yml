@@ -10,9 +10,9 @@
     - { role: Azure.azure_preview_modules }
     - { role: az_naming_convention }
     - { role: az_create_resource_group  }
-    - { role: az_create_virtual_network }
-    - { role: az_create_virtual_subnet }
-    - { role: az_create_network_security_group }
-    - { role: az_create_network_interface_card }
-    - { role: az_create_}
+    #- { role: az_create_virtual_network }
+    #- { role: az_create_virtual_subnet }
+    #- { role: az_create_network_security_group }
+    #- { role: az_create_network_interface_card }
+    #- { role: az_create_}
 ...
