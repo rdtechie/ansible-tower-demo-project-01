@@ -11,7 +11,7 @@
         dest: "{{ project_path }}/"
     
     - debug:
-        var: project_path
+        msg: "{{ project_path }}""
 
   vars_files:
     - "{{project_path}}/playground.yml"
