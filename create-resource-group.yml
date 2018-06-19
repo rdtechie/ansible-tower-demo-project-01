@@ -8,7 +8,7 @@
     - name: Retrieve Vault File from Git
       git:
         repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
-        dest: /
+        dest: "{{ project_path }}/"
 
   vars_files:
     - ./playground.yml
