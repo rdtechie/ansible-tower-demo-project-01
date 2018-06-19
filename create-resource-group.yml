@@ -9,9 +9,12 @@
       git:
         repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
         dest: "{{ project_path }}/"
+    
+    - debug:
+        var: project_path
 
   vars_files:
-    - ./playground.yml
+    - "{{project_path}}/playground.yml"
     - ./vars/vars.yml
   roles:
     - { role: Azure.azure_preview_modules }
