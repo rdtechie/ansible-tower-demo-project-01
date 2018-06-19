@@ -1,13 +1,15 @@
 ---
-- name: Retrieve Vault File from Git
-  git:
-    repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
-    dest: /tmp/vaults
-
 - name: Create Azure Resource Group
   hosts: localhost
   connection: local
   gather_facts: false
+
+  pre_tasks:
+    - name: Retrieve Vault File from Git
+      git:
+        repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
+        dest: /tmp/vaults
+
   vars_files:
     - /tmp/vaults/playground.yml
     - ./vars/vars.yml
