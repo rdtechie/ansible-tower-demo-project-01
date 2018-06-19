@@ -3,7 +3,11 @@
   hosts: localhost
   connection: local
   gather_facts: false
-
+  vars:
+    azure_tenant_id: "{{ lookup('env','CUSTOM_CRED_AZURE_TENANT_ID') }}"
+    azure_subscription_id: "{{ lookup('env','CUSTOM_CRED_AZURE_SUBSCRIPTION_ID') }}"
+    azure_client_id: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_ID') }}"
+    azure_client_secret: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_SECRET') }}"
   vars_files:
     - ./vars/vars.yml
   roles:
