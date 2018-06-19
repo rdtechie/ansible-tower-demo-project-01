@@ -15,7 +15,7 @@
         
     
   vars_files:
-    - /tmp/ansible_az_vaults/playground.yml
+    - https://raw.githubusercontent.com/rdtechie/ansible_az_vaults/master/playground.yml
     - ./vars/vars.yml
   roles:
     - { role: Azure.azure_preview_modules }
