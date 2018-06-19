@@ -11,7 +11,7 @@
         dest: /
 
   vars_files:
-    - /playground.yml
+    - ./playground.yml
     - ./vars/vars.yml
   roles:
     - { role: Azure.azure_preview_modules }
