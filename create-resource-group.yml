@@ -8,13 +8,10 @@
     - name: Retrieve Vault File from Git
       git:
         repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
-        dest: "{{ project_path }}/"
+        dest: ./
     
-    - debug:
-        msg: "{{ project_path }}"
-
   vars_files:
-    - "{{project_path}}/playground.yml"
+    - ./playground.yml
     - ./vars/vars.yml
   roles:
     - { role: Azure.azure_preview_modules }
