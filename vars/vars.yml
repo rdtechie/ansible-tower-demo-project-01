@@ -1,8 +1,8 @@
 az_resource_group_name: "{{ resource_group_name }}" # Name of the Resource Group.
 az_resource_group_location: "westeurope" # This corresponds to the options that Microsoft is giving.
-azure_tenant_id: "{{ vault_azure_tenant_id }}" # This value will be retrieved from the vault file in vars/vault.yml
-azure_subscription_id: "{{ vault_azure_subscription_id }}" # This value will be retrieved from the vault file in vars/vault.yml
-azure_client_id: "{{ vault_azure_client_id }}" # This value will be retrieved from the vault file in vars/vault.yml
-azure_client_secret: "{{ vault_azure_client_secret }}" # This value will be retrieved from the vault file in vars/vault.yml
+azure_tenant_id: "{{ lookup('env','CUSTOM_CRED_AZURE_TENANT_ID') }}"
+azure_subscription_id: "{{ lookup('env','CUSTOM_CRED_AZURE_SUBSCRIPTION_ID') }}"
+azure_client_id: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_ID') }}"
+azure_client_secret: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_SECRET') }}"
 azure_tags: # This example list consists of three tags that will be set on the Resource Group; Owner, Company and Project.
   - { Owner: "Homer Simpson", Company: "Duff Beer", Project: "Springfield" }

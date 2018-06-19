@@ -4,5 +4,3 @@
   name: az_naming_convention
 - src: https://github.com/rdtechie/ansible_role_az_create_resource_group
   name: az_create_resource_group
-- src: https://github.com/rdtechie/ansible_role_az_delete_resource_group
-  name: az_delete_resource_group
