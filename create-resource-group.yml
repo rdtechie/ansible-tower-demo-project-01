@@ -7,8 +7,12 @@
   pre_tasks:
     - name: Retrieve Vault File from Git
       git:
-        repo: 'https://github.com/rdtechie/ansible_az_vaults.git'
+        repo: https://github.com/rdtechie/ansible_az_vaults.git
         dest: /tmp/
+      register: gitresult
+      debug:
+        var: gitresult
+        
     
   vars_files:
     - /tmp/ansible_az_vaults/playground.yml
