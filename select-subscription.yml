@@ -1,0 +1,33 @@
+---
+- name: Create Azure Resource Group
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+
+  - name: Set Subscription ID to S01
+    set_fact:
+      azure_subscription_id = "{{ lookup('env','AZ_SUBSCRIPTION_ID_GEN_ACCPROD') }}"
+    when: at_var_azure_subscription_id == S01
+  
+  - name: Set Subscription ID to S02
+    set_fact:
+      azure_subscription_id = "{{ lookup('env','AZ_SUBSCRIPTION_ID_GEN_INFRA') }}"
+    when: at_var_azure_subscription_id == S02
+  
+  - name: Set Subscription ID to S03
+    set_fact:
+      azure_subscription_id = "{{ lookup('env','AZ_SUBSCRIPTION_ID_GEN_DEVTEST') }}"
+    when: at_var_azure_subscription_id == S03
+
+  - name: Set Subscription ID to PLAYGROUND
+    set_fact:
+      azure_subscription_id = "{{ lookup('env','AZ_SUBSCRIPTION_ID_PLAYGROUND') }}"
+    when: at_var_azure_subscription_id == PLAYGROUND
+
+  - name: Print Subscription ID
+    debug: 
+      msg: "Subscription ID is {{ azure_subscription_id }} because you've chosen {{ at_var_azure_subscription_id }}"
+      verbosity: 1
+...
