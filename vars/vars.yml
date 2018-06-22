@@ -5,4 +5,4 @@ azure_subscription_id: "{{ azure_subscription_id }}"
 azure_client_id: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_ID') }}"
 azure_client_secret: "{{ lookup('env','CUSTOM_CRED_AZURE_CLIENT_SECRET') }}"
 azure_tags: # This example list consists of three tags that will be set on the Resource Group; Owner, Company and Project.
-  - { Owner: "Homer Simpson", Company: "Duff Beer", Project: "Springfield" }
+  - { Owner: {{ at_var_azure_tag_owner }}, Company: {{ at_var_azure_tag_company }}, Project: {{ at_var_azure_tag_owner }} }
