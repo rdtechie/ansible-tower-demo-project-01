@@ -1,5 +1,6 @@
-# from galaxy
 - src: Azure.azure_preview_modules
+- src: https://github.com/rdtechie/ansible_role_az_select_subscription
+  name: az_select_subscription
 - src: https://github.com/rdtechie/ansible_role_az_naming_convention
   name: az_naming_convention
 - src: https://github.com/rdtechie/ansible_role_az_create_resource_group
